@@ -62,7 +62,9 @@ public class UserServiceImpl implements UserDetailService {
 				loginResponse.setLastName(findByEmail.getLastName());
 				return loginResponse;
 			} else {
-				throw new UserRuntimeException("Please Enter correct password");
+
+				throw new UserRuntimeException("Please Enter Correct Password");
+
 
 			}
 
