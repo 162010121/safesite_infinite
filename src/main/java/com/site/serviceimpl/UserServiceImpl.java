@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserDetailService {
 			}
 
 		} else {
-			throw new UserRuntimeException("no such record found");
+			throw new UserRuntimeException("No Such Record Found");
 		}
 
 	}
