@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserDetailService {
 				LoginResponseDetails loginResponse = new LoginResponseDetails();
 				loginResponse.setLoginTime(new Date(System.currentTimeMillis()));
 				loginResponse.setUserId(findByEmail.getUserId());
-				loginResponse.setExpiry(new Date(System.currentTimeMillis()+1000*60*30));
+				loginResponse.setExpiry(new Date(System.currentTimeMillis()+10000*60*30));
 				loginResponse.setEmail(findByEmail.getEmail());
 				loginResponse.setRoles(findByEmail.getRoles());
 				loginResponse.setPhoneNum(findByEmail.getPhoneNumber());
@@ -62,7 +62,9 @@ public class UserServiceImpl implements UserDetailService {
 				loginResponse.setLastName(findByEmail.getLastName());
 				return loginResponse;
 			} else {
+
 				throw new UserRuntimeException("Please Enter Correct Password");
+
 
 			}
 
